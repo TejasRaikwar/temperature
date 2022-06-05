@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+           /* background-image: linear-gradient(red,yellow); */
+           /* background-image: linear-gradient(blue,red); */
+           background-color:rgb(30, 25, 25);
+           background-size: 100%;
+           
+        }
+        
+
+        nav {
+            height: 10vh;
+            background-color:blue;
+            /* opacity: .7; */
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+            
+        }
+        .temp{
+          margin: 0;
+          padding:0;
+          /* background-color:aquamarine; */
+          /* justify-content: center; */
+          align-self: center;
+        }
+
+        .coverter{
+          color: white;
+          background-color:transparent;
+          width: 60vh;
+          height: 25vh;
+          border:2px solid black;
+          margin-left: 70vh;
+          margin-top: 13vh;
+          border-radius: 5px;
+          box-shadow: 10px 10px black;
+        }
+
+        #inputFahrenheit{
+          /* margin: 2vh; */
+          color: white;
+          padding: 0.8vh;
+          width: 30vh;
+        }
+
+        #outputCelcius{
+          width: 30vh;
+          padding: 0.8vh;
+          font:bolder;
+          /* border: 2px solid black; */
+        }
+
+        .coverter1{
+          color: white;
+          background-color:transparent;
+          width: 60vh;
+          height: 25vh;
+          border:2px solid black;
+          margin-left: 70vh;
+          margin-top: 13vh;
+          border-radius: 5px;
+          box-shadow: 10px 10px black;
+
+
+        }
+
+        
+        #inputCelsius{
+          /* margin: 2vh; */
+          color: white;
+          padding: 0.8vh;
+          width: 30vh;
+        }
+
+        #outputFahrenheit{
+          width: 30vh;
+          padding: 0.8vh;
+          font:bolder;
+          /* border: 2px solid black; */
+        }
+
+        .copy{
+          background-color: black;
+          height: 3.8vh;
+          margin-top: 9vh;
+          color: white;
+          text-align: center;
+        
+          /* height: ; */
+        }
+   </style>
+
+<script>
+  function temperatureConverter(valNum) {
+    valNum = parseFloat(valNum);
+    document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+  }
+
+  function temperatureConverter1(valNum) {
+    valNum = parseFloat(valNum);
+    document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+  }
+  </script>
+  
+  
+
+</head>
+
+<body>
+    <nav>
+        Temperature Converter
+    </nav>
+   <div class="temp">
+    <div class="coverter">
+        <center><h1>Fahrenheit To Celsius </h1></center>
+    <p>
+      <label><center><h2>Fahrenheit</h2></center></label>
+      <center><input id="inputFahrenheit" type="number" placeholder="Put Temperature in Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)"></center>
+    </p>
+    <p><center><h2>Celsius:</h2></center> <br>
+      <center><span id="outputCelcius"></span>°C</p></center>
+  </div>
+
+  <div class="coverter1">
+    <center><h1>Celsius To Fahrenheit</h1></center>
+    <p>
+      <label><center><h2>Celsius</h2></center></label>
+      <center><input id="inputCelsius" type="number" placeholder="Put Temperature in Celsius" oninput="temperatureConverter1(this.value)" onchange="temperatureConverter(this.value)"></center>
+    </p>
+    <p><center><h2>Fahrenheit:</h2></center> <br>
+      <center><span id="outputFahrenheit"></span>°F</p></center>
+    
+  </div>
+   </div>
+
+   <footer>
+    <div class="copy">Copyright © 2022 Created by Tejas Raikwar  All rights reserved</div>
+   </footer>
+
+</body>
+</html>
